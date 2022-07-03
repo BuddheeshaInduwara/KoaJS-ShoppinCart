@@ -1,5 +1,12 @@
-const Router = require('koa-router')
-const { addItem } = require('../api/trader.api')
+const Router = require('@koa/router')
+
+const {
+  addItem,
+  editItem,
+  getInventoryItems,
+  getAllCustomers,
+  addPromotions,
+} = require('../api/trader.api')
 
 const router = new Router({
   prefix: '/trader',

@@ -1,4 +1,4 @@
-const { Inventory, Cart, WishList } = require('../dal')
+const { Inventory, Cart, Wishlist } = require('../dal')
 
 const getAllItems = () => {
   return [...Inventory]
@@ -22,7 +22,7 @@ const addToCart = (item) => {
 }
 
 const addToWishList = (item) => {
-  WishList.set(item.id, item)
+  Wishlist.set(item.id, item)
   return item
 }
 
@@ -31,11 +31,11 @@ const getCartItems = () => {
 }
 
 const getWishListItems = () => {
-  return [...WishList]
+  return [...Wishlist]
 }
 
 const removeWishListItem = (id) => {
-  WishList.delete(id)
+  Wishlist.delete(id)
   return
 }
 
