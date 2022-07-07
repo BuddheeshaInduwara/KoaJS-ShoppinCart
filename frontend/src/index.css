@@ -1,0 +1,48 @@
+table,
+td,
+th {
+  border: 1px solid;
+}
+
+td {
+  text-align: center;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+}
+
+button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+input[type='text'],
+input[type='password'],
+select {
+  padding: 8px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+p {
+  color: red;
+  font-size: 20px;
+  font-weight: 600;
+}
