@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import AddItem from '../components/trader/AddItem'
-import ViewInventory from '../components/trader/ViewInventory'
+import CartTable from '../components/customer/CartTable'
+import ItemTable from '../components/customer/ItemTable'
+import WishlistTable from '../components/customer/WishlistTable'
 
-const Trader = () => {
+const Customer = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'))
-    if (!user || user.role !== 'trader') {
+    if (!user) {
       navigate('/')
     }
   }, [])
@@ -22,10 +23,11 @@ const Trader = () => {
     <div>
       <button onClick={() => logout()}>Sign Out</button>
       <br />
-      <AddItem />
-      <ViewInventory />
+      <ItemTable />
+      <CartTable />
+      <WishlistTable />
     </div>
   )
 }
 
-export default Trader
+export default Customer
